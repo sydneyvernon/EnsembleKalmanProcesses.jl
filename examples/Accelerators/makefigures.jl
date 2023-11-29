@@ -496,6 +496,13 @@ N_trials=200
 lor_errs, lor_errs_acc, lor_errs_acc_cs, lor_theta_history = lorenz_main(N_ens,N_iter,N_trials,"Inversion")
 fig1(N_ens,N_iter,N_trials,lor_errs,lor_errs_acc,lor_errs_acc_cs,lor_theta_history,"lorenz","EKI convergence on Lorenz96",false)
 
+N_ens=20
+N_iter=20
+N_trials=200
+lor_errs, lor_errs_acc, lor_errs_acc_cs, lor_theta_history = expsin_main(N_ens,N_iter,N_trials,"Inversion")
+fig1(N_ens,N_iter,N_trials,lor_errs,lor_errs_acc,lor_errs_acc_cs,lor_theta_history,"expsin_20ens_200trial","EKI convergence on Exp Sin",true)
+
+
 # N_ens=50
 # N_iter=20
 # N_trials=10
@@ -504,17 +511,17 @@ fig1(N_ens,N_iter,N_trials,lor_errs,lor_errs_acc,lor_errs_acc_cs,lor_theta_histo
 
 
 #UKI TESTS
-# N_ens=20
-# N_iter=20
-# N_trials=200
-# es_errs, es_errs_acc, es_errs_acc_cs, es_theta_history = expsin_main(N_ens,N_iter,N_trials,"Unscented")
-# fig1(N_ens,N_iter,N_trials,es_errs,es_errs_acc,es_errs_acc_cs,es_theta_history,"expsin_UKI","UKI convergence on Exp Sin",true)
+N_ens=20
+N_iter=20
+N_trials=200
+es_errs, es_errs_acc, es_errs_acc_cs, es_theta_history = expsin_main(N_ens,N_iter,N_trials,"Unscented")
+fig1(N_ens,N_iter,N_trials,es_errs,es_errs_acc,es_errs_acc_cs,es_theta_history,"expsin_UKI","UKI convergence on Exp Sin",true)
 
-# N_ens=20
-# N_iter=20
-# N_trials=200
-# es_errs, es_errs_acc, es_errs_acc_cs, es_theta_history = lorenz_main(N_ens,N_iter,N_trials,"Unscented")
-# fig1(N_ens,N_iter,N_trials,es_errs,es_errs_acc,es_errs_acc_cs,es_theta_history,"lorenz_UKI","UKI convergence on Lorenz96",true)
+N_ens=20
+N_iter=20
+N_trials=200
+es_errs, es_errs_acc, es_errs_acc_cs, es_theta_history = lorenz_main(N_ens,N_iter,N_trials,"Unscented")
+fig1(N_ens,N_iter,N_trials,es_errs,es_errs_acc,es_errs_acc_cs,es_theta_history,"lorenz_UKI","UKI convergence on Lorenz96",false)
 
 # N_ens=20
 # N_iter=20
